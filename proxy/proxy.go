@@ -9,7 +9,7 @@ type Pay interface {
 type AliPay struct {
 }
 
-func (a *AliPay) Pay(i int) error {
+func (a *AliPay) pay(i int) error {
 	fmt.Println("this is Alipay")
 	i = 1
 	return nil
@@ -21,6 +21,6 @@ type User struct {
 
 func (u User) Pay(i int) error {
 	fmt.Println("this is user's pay")
-	err := u.AliPay.Pay(i)
+	err := u.AliPay.pay(i)
 	return err
 }
